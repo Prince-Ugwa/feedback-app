@@ -2,10 +2,15 @@ import { useState } from "react";
 import Card from "./shared/Card.component";
 import Button from "./shared/Button.component";
 const Feedbackform = () => {
+  /* @form input data state */
   const [text, setText] = useState("");
   const handleTextChange = (e) => {
     setText(e.target.value);
   };
+
+  /* @form  btn isDisabled  btn-state */
+  const [btnDisabled,]
+  /* @form error msg    state */
   return (
     <Card>
       <form>
