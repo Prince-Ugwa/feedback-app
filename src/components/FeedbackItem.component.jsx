@@ -27,7 +27,7 @@ import { FaTimes } from "react-icons/fa";
 import Card from "./shared/Card.component";
 
 function FeedbackItem({ feedback, handleDelete }) {
-  console.log(feedback);
+  // console.log(feedback);
   // const handleClick = (id) => {
   //   console.log(id);
   // };

@@ -41,6 +41,7 @@
 //     </div>
 //   );
 // };
+import { v4 as uuidv4 } from "uuid";
 import { useState } from "react";
 
 import Header from "./components/Header.component";
@@ -52,6 +53,10 @@ import Feedbackform from "./components/FeedbackForm.component";
 const App = () => {
   const [feedback, setFeedback] = useState(FeedbackData);
 
+  const addFeedback = (newFeedback) => {
+    newFeedback.id = uuidv4();
+    console.log(newFeedback);
+  };
   //this function filter through the feebacklist using
   //the setfeedback to update feedback and remove when the close icon is clicked
   const deleteFeedback = (id) => {
@@ -63,7 +68,7 @@ const App = () => {
     <div>
       <Header />
       <div className="container">
-        <Feedbackform />
+        <Feedbackform handleAdd={addFeedback} />
         <FeedbackStats feedback={feedback} />
         {/*<FeedbackItemComponent />*/}
         <FeedbackList feedback={feedback} handleDelete={deleteFeedback} />

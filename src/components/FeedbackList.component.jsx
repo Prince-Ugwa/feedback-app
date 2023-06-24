@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import FeedbackItem from "./FeedbackItem.component";
 
 const FeedbackList = ({ feedback, handleDelete }) => {
-  console.log(feedback);
+  // console.log(feedback);
   if (!feedback || feedback.length === 0) {
     return <p> No feedback yet! Add one..</p>;
   }
