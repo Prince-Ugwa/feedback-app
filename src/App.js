@@ -56,6 +56,7 @@ const App = () => {
   const addFeedback = (newFeedback) => {
     newFeedback.id = uuidv4();
     console.log(newFeedback);
+    setFeedback([newFeedback, ...feedback]);
   };
   //this function filter through the feebacklist using
   //the setfeedback to update feedback and remove when the close icon is clicked

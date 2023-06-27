@@ -35,6 +35,7 @@ const Feedbackform = ({ handleAdd }) => {
         ratig,
       };
       handleAdd(newFeedback);
+      setText("");
     }
   };
 
