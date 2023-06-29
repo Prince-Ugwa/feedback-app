@@ -10,7 +10,7 @@ const Feedbackform = ({ handleAdd }) => {
   const [btnDisabled, setBtnDisabled] = useState(true);
 
   /* rating select */
-  const [ratig, setRating] = useState(10);
+  const [rating, setRating] = useState(10);
 
   /* @form error msg    state */
   const [erromsg, setErrormsg] = useState("");
@@ -27,12 +27,12 @@ const Feedbackform = ({ handleAdd }) => {
     }
     setText(e.target.value);
   };
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const handleSubmit = (e) => {
+    e.preventDefault();
     if (text.trim().length > 10) {
       const newFeedback = {
         text,
-        ratig,
+        rating,
       };
       handleAdd(newFeedback);
       setText("");

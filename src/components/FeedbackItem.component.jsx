@@ -41,7 +41,7 @@ function FeedbackItem({ feedback, handleDelete }) {
     </Card>
   );
 }
-FeedbackItem.prototype = {
+FeedbackItem.propTypes = {
   feedback: PropTypes.object,
 };
 
